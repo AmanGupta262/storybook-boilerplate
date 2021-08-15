@@ -1,3 +1,75 @@
+@import url("http://fonts.cdnfonts.com/css/sofia-pro?styles=17636,17637,17634,17635,17638,17639,17628,17629");
+:root,
+.root,
+#root,
+#docs-root {
+  --primary: #204f84;
+  --button-primary: #204f84;
+  --input: #ffffff;
+  --text: #000000;
+  --text-primary: #232323;
+  --placeholder: #706e6b;
+  --form-label: #3e3e3c;
+  --input-border: #dddbda;
+  --text-crumb: #3e3e3c;
+  --text-crumb-active: var(--primary);
+  --crumb-active: #d3ebf8;
+  --crumb-completed: #76aeda;
+  --crumb: #ecebea;
+}
+body {
+  &.cadbury {
+    .ant-dropdown,
+    .root,
+    #root,
+    #docs-root {
+      --primary: #342584;
+      --button-primary: var(--primary);
+      --crumb-active: #ddd5f8;
+    }
+  }
+
+  &.dark {
+    .ant-dropdown,
+    .root,
+    #root,
+    #docs-root {
+      --primary: #1e1d2c;
+      --text: #ffffff;
+      --button-primary: #1373fb;
+      --input: #353648;
+      --text-crumb: #ffffff;
+      --text-crumb-active: #ffffff;
+      --crumb-active: #1e1d2c;
+      --crumb-completed: #353648;
+      --crumb: #353648;
+    }
+  }
+
+  &.cola {
+    .ant-dropdown,
+    .root,
+    #root,
+    #docs-root {
+      --primary: #000000;
+      --button-primary: var(--primary);
+      --crumb-active: #feddcb;
+      --text-crumb-active: #f40000;
+    }
+  }
+
+  &.voda {
+    .ant-dropdown,
+    .root,
+    #root,
+    #docs-root {
+      --primary: #fd0301;
+      --button-primary: var(--primary);
+      --crumb-active: #feddcb;
+    }
+  }
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities; 
