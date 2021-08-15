@@ -1,0 +1,21 @@
+.button.ant-btn-default {
+  border-color: var(--button-primary) !important;
+  color: var(--button-primary) !important;
+
+  &:hover,
+  &:focus {
+    background-color: var(--button-primary) !important;
+    color: #ffffff !important;
+  }
+}
+button.ant-btn-primary {
+  background-color: var(--button-primary) !important;
+  border-color: var(--button-primary) !important;
+  color: #ffffff !important;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8 !important;
+    color: #ffffff;
+  }
+}

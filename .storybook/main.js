@@ -6,6 +6,7 @@ module.exports = {
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/preset-ant-design",
+    "storybook-addon-themes",
     {
       name: "@storybook/preset-create-react-app",
       options: {
