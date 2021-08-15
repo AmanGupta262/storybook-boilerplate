@@ -1,5 +1,8 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
+
 import { Button as Btn, ButtonProps } from "antd";
+import "../../translations/i18n";
 import "./Button.scss";
 
 export interface IProps extends ButtonProps {
@@ -11,7 +14,7 @@ export interface IProps extends ButtonProps {
 }
 
 const Button = ({
-  label = "Button",
+  label = "Cancel",
   size = "middle",
   loading,
   type,
@@ -19,6 +22,7 @@ const Button = ({
   disabled,
   ...rest
 }: IProps) => {
+  const { t } = useTranslation();
   return (
     <>
       <Btn
@@ -31,7 +35,7 @@ const Button = ({
         disabled={disabled}
         {...rest}
       >
-        {label}
+        {t(`${label}`)}
       </Btn>
     </>
   );

@@ -1,4 +1,13 @@
+import { ConfigProvider } from "antd";
+
+import enUS from "antd/lib/locale/en_US";
+import zhCN from "antd/lib/locale/zh_CN";
+import frFR from "antd/lib/locale/fr_FR";
+
+import i18n from "../src/translations/i18n";
+
 import "../src/index.scss";
+
 export const parameters = {
   themes: {
     clearable: false,
@@ -55,3 +64,20 @@ export const globalTypes = {
     },
   },
 };
+
+const languages = {
+  enUS: enUS,
+  frFR: frFR,
+  zhCN: zhCN,
+};
+
+export const decorators = [
+  (Story, context) => {
+    i18n.changeLanguage(context.globals.locale);
+    return (
+      <ConfigProvider locale={languages[context.globals.locale]}>
+        <Story />
+      </ConfigProvider>
+    );
+  },
+];

@@ -28,9 +28,6 @@ export default {
       action: "clicked",
     },
   },
-  args: {
-    label: "Button",
-  },
 } as ComponentMeta<typeof Button>;
 
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
