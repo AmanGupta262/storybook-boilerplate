@@ -39,3 +39,19 @@ export const parameters = {
     },
   },
 };
+
+export const globalTypes = {
+  locale: {
+    name: "Locale",
+    description: "Internationalization locale",
+    defaultValue: "enUS",
+    toolbar: {
+      icon: "globe",
+      items: [
+        { value: "enUS", right: "🇺🇸", title: "English" },
+        { value: "frFR", right: "🇫🇷", title: "Français" },
+        { value: "zhCN", right: "🇨🇳", title: "中文" },
+      ],
+    },
+  },
+};
