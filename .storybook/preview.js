@@ -1,4 +1,8 @@
+import { BrowserRouter as Router } from "react-router-dom";
 import { ConfigProvider } from "antd";
+
+import { withTests } from "@storybook/addon-jest";
+import results from "../src/.jest-test-results.json";
 
 import enUS from "antd/lib/locale/en_US";
 import zhCN from "antd/lib/locale/zh_CN";
@@ -76,8 +80,11 @@ export const decorators = [
     i18n.changeLanguage(context.globals.locale);
     return (
       <ConfigProvider locale={languages[context.globals.locale]}>
-        <Story />
+        <Router>
+          <Story />
+        </Router>
       </ConfigProvider>
     );
   },
+  withTests({ results }),
 ];
